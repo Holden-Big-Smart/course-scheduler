@@ -1,4 +1,4 @@
-import { contextBridge, ipcRenderer } from 'electron';
+const { contextBridge, ipcRenderer } = require('electron');
 
 // 将特定的 API 暴露给渲染进程 (React)
 contextBridge.exposeInMainWorld('electronAPI', {

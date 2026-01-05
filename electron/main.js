@@ -14,8 +14,8 @@ function createWindow() {
     width: 1200,
     height: 800,
     webPreferences: {
-      // 加载预加载脚本
-      preload: path.join(__dirname, 'preload.js'),
+      // 关键修改：指向 .cjs 文件，确保沙箱环境能正确加载
+      preload: path.join(__dirname, 'preload.cjs'),
       // 安全设置：禁止渲染进程直接使用 Node.js API
       contextIsolation: true,
       nodeIntegration: false,
